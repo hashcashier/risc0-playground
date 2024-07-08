@@ -1,0 +1,18 @@
+[package]
+name = "methods"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+risc0-build = { version = "1.0.1", features = ["guest-list"] }
+
+[dependencies]
+risc0-build = { version = "1.0.1", features = ["guest-list"] }
+
+[dev-dependencies]
+anyhow = "1.0.86"
+risc0-zkvm = { version = "1.0.1", features = ["prove"] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[package.metadata.risc0]
+methods = ["labeled", "resumable"]
